@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>RPIWS ~ Webcam</title>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/rpiws.css"/>
+    <script src="/js/jquery-3.2.1.min.js"></script>
+    <script src="/js/rpiws.js"></script>
+</head>
+<body>
+<div class="centered">
+    <img id="webcamImage"/>
+    <form action="/logout" method="post">
+        <input type="submit" value="Logout" class="btn btn-block btn-outline-primary"/>
+        <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
+    </form>
+</div>
+</body>
+</html>
