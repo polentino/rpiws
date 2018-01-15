@@ -35,7 +35,7 @@ of course I could have gone deeper, and implement for example bruteforce detecti
 are good enough for your privacy. Patches are welcome, by the way!
 
 
-# Build instruction
+# Build instructions
 
 1. clone the repo ``$ git clone https://github.com/polentino/rpiws`` and then ``cd rwpiws``
 2. create the keystore for your application server (note: validity 3650 means 10 years) and follow the instructions in the console ``$ keytool -genkey -alias rpiws -storetype PKCS12 -keyalg RSA -keysize 2048 -keystore keystore.p12 -validity 3650``
@@ -49,7 +49,7 @@ are good enough for your privacy. Patches are welcome, by the way!
 1. type ``$ java -jar target/rpi-webcam-server-1.0-SNAPSHOT.jar``
 ![rpiws run](site/rpiws_run.png)
 2. open a browser in your laptop, and type ``http://localhost:8080``:
-    * since the certificate you build is self-signed, any browser will promptly war you that the website is not secure. The reason
+    * since the certificate you build is self-signed, any browser will promptly warn you that the website is not secure. The reason
     is because it cannot determine your identity, but the certificate itself **is** secure because **you** made it ;)
     So don't worry, click on ``ADVANCED`` -> ``proceed to localhost(unsafe)`` if you're using Chrome, or
     ``ADVANCED`` -> ``Add Exception..`` -> ``Confirm Security Exception`` if you're using Firefox
